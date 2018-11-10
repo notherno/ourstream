@@ -12,11 +12,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "update": "yarn upgrade-interactive --latest"
   },
   "devDependencies": {
-    "@types/node": "^9.4.6",
+    "@types/node": "^10.12.5",
     "ts-loader": "^3.5.0",
-    "typescript": "^2.7.2"
+    "typescript": "^3.1.6"
   }
 }
