@@ -5,7 +5,7 @@ const argv = parseArgs(process.argv.slice(2), {
     p: 'port',
   },
   string: ['H'],
-  unknown: parameter => false,
+  unknown: _parameter => false,
 })
 
 const port =
@@ -18,6 +18,7 @@ const host =
   process.env.HOST ||
   process.env.npm_package_config_nuxt_host ||
   'localhost'
+
 module.exports = {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`,
@@ -44,13 +45,9 @@ module.exports = {
       },
     ],
   },
-  /*
-   ** Customize the progress-bar color
-   */
+  /** Customize the progress-bar color */
   loading: { color: '#3B8070' },
-  /*
-   ** Build configuration
-   */
+  /** Build configuration */
   css: ['~/assets/css/main.css'],
   build: {},
   modules: ['@nuxtjs/axios', '~/modules/typescript.js'],
